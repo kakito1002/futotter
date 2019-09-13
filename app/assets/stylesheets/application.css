@@ -1,0 +1,72 @@
+html, body,
+ul, ol, li,
+h1, h2, h3, h4, h5, h6, p,
+form, input, div {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+
+body {
+}
+.header {
+  background-color: rgb(240, 8, 46);
+  color: #fff;
+  height: 90px;
+}
+
+.header-logo {
+  float: left; 
+  font-size: 36px; 
+  padding: 18px 60px 18px 40px; 
+}
+
+.header-list {
+  float: left; 
+}
+
+.header-list li {
+  float: left;  
+  padding: 33px 10px;
+}
+
+.post {
+  float: right;
+  text-align: center;
+  padding: 33px 30px;
+  
+}
+.contents {
+  background-color: pink;
+  height: 100px;
+  width: 100%;
+}
+
+.left-contents {
+  background-image: url("https://rakugakiicon.com/ri/wp-content/uploads/2015/04/e41f9f31e443fac9b71463fd6125b911.png");
+  height: 1000px;
+  width: 200px;
+  margin: auto 0 0 0;
+  position: absolute;
+}
+
+.right-contents {
+  background-image: url("https://rakugakiicon.com/ri/wp-content/uploads/2015/04/e41f9f31e443fac9b71463fd6125b911.png");
+  height: 1000px;
+  width: 200px;
+  margin: 0 0 0 auto;
+  position: relative;
+}
+
+
+.contents-row{
+   text-align: center;
+   background: pink;
+   margin: 0 auto;
+   height:1000px ;
+   width: 100%;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Futotter</title>
+     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+   <header class="header">
+      <div class="header-logo">
+      <%= link_to "Futotter", root_path%>
+      </div>
+      <% if user_signed_in?%>
+      <div class="header-list">
+        <span><%= current_user.nickname %>
+          <ul class="user__info">
+          <li>
+           <a href="/users/<%= current_user.id %>">マイページ</a>
+          </li>
+          <li>
+            <%= link_to "ログアウト",destroy_user_session_path, method: :delete %>
+          </li>
+         </span>
+           <a class="post" href="/tweets/new">投稿する</a> 
+          <%else%>
+          <li>
+          <%= link_to "ログイン",new_user_session_path%>
+          </li>
+          <li>
+          <%= link_to "Signin",new_user_registration_path%>
+          </li>
+        </ul>
+      </div>
+      <% end %>
+    </header>
+    <div class="contents">
+      <div class="left-contents"></div>
+      <div class="right-contents"></div>
+    </div>
+    <%= yield %>
+    
+  </body>
+</html>
